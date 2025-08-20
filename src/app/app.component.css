@@ -1,0 +1,26 @@
+.retro-dashboard-card {
+  border: 5px solid #000;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.75); /* Shadow for a 3D effect */
+  transform: rotate(-2deg); /* A slight tilt for a playful look */
+  animation: bounceIn 0.8s ease-out;
+}
+
+.retro-body {
+  border: 5px solid #302f2f;
+  border-radius: 10px;
+  background-color: #0c0c0c; /* Pink background */
+  padding: 20px;
+}
+
+.background {
+  /* Using a repeating linear gradient to create the pixel grid effect */
+  background-color: #0c0c0c;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 10px 10px;
+  height: 100vh;
+
+}

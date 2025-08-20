@@ -7,11 +7,13 @@ import { ToDoComponent } from './components/toDo/toDo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-      ToDoComponent
+      ToDoComponent,
+      NavbarComponent
    ],
   imports: [
     BrowserModule,

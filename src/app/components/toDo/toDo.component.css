@@ -1,157 +1,129 @@
 /* src/app/app.component.css */
 
-/* Importing Google Fonts: Inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+/* Importing Google Fonts for the retro style */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
-/* Apply base styles to the entire page */
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #F4F6F9; /* Light gray background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
+/* Main container and card styling to mimic a retro window */
+.retro-container {
+  max-width: 50vw;
 }
 
-/* Main container for the to-do list */
-.todo-container {
+.retro-card {
+  border: 5px solid #114ec0;
+  border-radius: 15px;
   background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  width: 100%;
-  max-width: 600px;
-  animation: fadeIn 0.8s ease-in-out;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.75); /* Shadow for a 3D effect */
+  transform: rotate(-2deg);
+  animation: bounceIn 0.8s ease-out;
 }
 
-/* Animation for a subtle fade-in effect on load */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.retro-body {
+  border: 5px solid #059b6e;
+  border-radius: 10px;
+  background-color: #1e0436af; /* Pink background */
+  padding: 20px;
 }
 
-/* Heading style */
-h1 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 30px;
-  font-weight: 700;
+/* Animations */
+@keyframes bounceIn {
+  0% { transform: scale(0.8) rotate(-2deg); opacity: 0; }
+  60% { transform: scale(1.05) rotate(-2deg); opacity: 1; }
+  100% { transform: scale(1) rotate(-2deg); }
 }
 
-/* Form for adding new tasks */
-.add-task-form {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 30px;
+/* Header styling */
+.retro-header {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 3rem;
+  color: #d30442;
+  -webkit-text-stroke: 2px #fff;
+  text-shadow: 4px 4px 0px #e423f5;
+  margin-bottom: 25px;
 }
 
-.add-task-form input {
-  flex-grow: 1;
-  padding: 12px 18px;
-  border: 2px solid #ddd;
+/* Form and input styling */
+.retro-form {
+  border: 3px solid #000;
   border-radius: 8px;
-  font-size: 16px;
-  transition: border-color 0.3s;
+  background-color: #FFD700; /* Yellow background */
+  padding: 10px;
 }
 
-.add-task-form input:focus {
-  outline: none;
-  border-color: #4A90E2; /* Primary blue on focus */
+.retro-input {
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
 }
 
-.add-task-form button {
-  background-color: #4A90E2;
+.retro-btn {
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-family: 'Luckiest Guy', cursive;
+  background-color: #0360ec;
+  color: #000;
+  -webkit-text-stroke: 1px #000;
+}
+
+.retro-btn:hover {
+  background-color: #40c0a5;
   color: #fff;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s, transform 0.2s;
 }
 
-.add-task-form button:hover {
-  background-color: #3a7bc0;
-  transform: translateY(-2px);
-}
-
-.add-task-form button:active {
-  transform: translateY(0);
-}
-
-/* To-do list styling */
-.todo-list {
-  list-style: none;
+/* List styling */
+.retro-list {
+  list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
-.todo-list li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #F9F9F9;
-  padding: 15px 20px;
+.retro-list-item {
+  border: 3px solid #000;
   border-radius: 8px;
+  background-color: #fff;
+  padding: 15px;
   margin-bottom: 10px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s;
   cursor: pointer;
 }
 
-.todo-list li:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+.retro-list-item:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
 }
 
-.todo-list li:last-child {
-  margin-bottom: 0;
+.retro-text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.9rem;
+  color: #333;
 }
 
-.todo-text {
-  font-size: 18px;
-  color: #555;
-  flex-grow: 1;
-  transition: color 0.3s;
-}
-
-/* Styling for completed tasks */
-.completed .todo-text {
+.completed-text {
   text-decoration: line-through;
-  color: #bbb;
-}
-
-.completed-icon {
-  color: #50E3C2; /* Green for completed tasks */
-  font-size: 20px;
-  margin-right: 15px;
-}
-
-.delete-btn {
-  background: none;
-  border: none;
-  color: #e74c3c;
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: opacity 0.3s, transform 0.2s;
-}
-
-.delete-btn:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-/* Empty list message */
-.empty-message {
-  text-align: center;
   color: #888;
-  font-style: italic;
-  margin-top: 50px;
+}
+
+.retro-icon {
+  font-size: 1.2rem;
+  margin-right: 5px;
+  color: #50E3C2;
+}
+
+.retro-delete-btn {
+  background-color: #F875AA;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 5px 10px;
+  line-height: 1;
+}
+
+/* Empty message styling */
+.retro-empty-message {
+  font-family: 'Press Start 2P', cursive;
+  color: #555;
+  font-size: 0.8rem;
+  text-shadow: 1px 1px 0px #fff;
 }
