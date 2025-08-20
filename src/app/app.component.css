@@ -3,7 +3,7 @@
   border-radius: 15px;
   background-color: #fff;
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.75); /* Shadow for a 3D effect */
-  transform: rotate(-2deg); /* A slight tilt for a playful look */
+  /* transform: rotate(-2deg); */
   animation: bounceIn 0.8s ease-out;
 }
 

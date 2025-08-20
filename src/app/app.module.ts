@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
       ToDoComponent,
-      NavbarComponent
+      NavbarComponent,
+      SidebarComponent
    ],
   imports: [
     BrowserModule,

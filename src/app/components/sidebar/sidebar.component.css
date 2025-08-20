@@ -1,0 +1,45 @@
+/* src/app/sidebar/sidebar.component.css */
+
+.retro-dashboard-card {
+  border: 3px solid #000;
+  border-radius: 8px;
+  background-color: #fce4ec; /* A lighter pink for contrast */
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+}
+
+.retro-dashboard-title {
+  font-family: 'Luckiest Guy', cursive;
+  color: #552583;
+  -webkit-text-stroke: 1px #fff;
+  text-shadow: 2px 2px 0px #F5A623;
+}
+
+.retro-dashboard-subtitle {
+  font-family: 'Luckiest Guy', cursive;
+  color: #F875AA;
+}
+
+.retro-stat-box {
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.retro-stat-label, .retro-stat-value {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+}
+
+.retro-divider {
+  border-top: 2px dashed #000;
+  margin: 15px 0;
+}
+
+.retro-icon-small {
+  font-size: 1rem;
+  margin-right: 5px;
+}
