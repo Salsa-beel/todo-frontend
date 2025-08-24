@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center align-items-center vh-100">
     <div class="pixel-container p-5 w-100" style="max-width: 450px;">
         <h2 class="text-center mb-4 text-pixel-green">Welcome <br> TO-DO LOGIN</h2>
-        <form (ngSubmit)="onLogin()">
+        <form (ngSubmit)="onRegister()">
             <div class="mb-3">
                 <input
                     type="text"
@@ -11,7 +11,16 @@
                     name="username"
                     required>
             </div>
-            <div class="mb-4">
+            <div class="mb-3">
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="EMAIL"
+                    [(ngModel)]="email"
+                    name="email"
+                    required>
+            </div>
+            <div class="my-1 ">
                 <input
                     type="password"
                     class="form-control"
@@ -19,8 +28,15 @@
                     [(ngModel)]="password"
                     name="password"
                     required>
+
             </div>
-            <div class="d-grid gap-2">
+                       <div class="my-3">
+                     <a  routerLink="/login">
+                       <span class="text-white fs-6 mt-5">Already have an account?</span>
+                     </a>
+                       </div>
+
+            <div class="d-grid gap-2 mt-2">
                 <button
                     type="submit"
                     class="btn btn-primary btn-pixel"

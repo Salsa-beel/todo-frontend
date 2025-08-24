@@ -1,4 +1,6 @@
-<div class="container retro-container p-4">
+<app-navbar></app-navbar>
+
+<div class="container-fluid retro-container p-4">
   <div class="card retro-card">
     <div class="card-body retro-body p-4">
 
@@ -56,7 +58,7 @@
 
             <!-- Message to show when the list is empty -->
             <p
-              *ngIf="allTasks.length === 0"
+              *ngIf="allTasks?.length === 0"
               class="text-center mt-4 retro-empty-message"
             >
               You have no tasks! 🎉

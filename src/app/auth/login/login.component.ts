@@ -1,24 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-username = '';
-  password = '';
+  username:any;
+  password:any;
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
   ) { }
 
-  /**
-   * Handles the login form submission.
-   */
+
   onLogin(): void {
     // Basic validation
     if (this.username && this.password) {
