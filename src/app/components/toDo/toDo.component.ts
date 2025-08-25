@@ -7,6 +7,7 @@ import { TodoService } from '../../services/todo.service';
   styleUrls: ['./toDo.component.css']
 })
 export class ToDoComponent implements OnInit {
+
   allTasks:any
   currentEditTask: any = null;
   newTask!: string;
@@ -44,6 +45,16 @@ export class ToDoComponent implements OnInit {
 editTodo(todo: any) {
   // Set the current todo to be edited
   this.currentEditTask = { ...todo };
+}
+completeTodo(id:string){
+
+  this.todoService.completeTodo(id).subscribe({
+    next:()=>{
+   console.log('Todo completed successfully.');
+    // After a successful completion, refresh the list of tasks
+    this.getAllTodos();
+    }
+  })
 }
 saveEdit() {
     this.todoService.updateTodo(this.currentEditTask.id, this.currentEditTask.task).subscribe({

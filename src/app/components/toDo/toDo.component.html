@@ -59,6 +59,13 @@
 
 
            <div class="d-flex align-items-center">
+              <button
+                class="btn btn-sm retro-complete-btn"
+                (click)="completeTodo(todo.id)"
+                *ngIf="!todo.completed"
+              >
+                ✔
+              </button>
         <!-- Edit Button Logic -->
 
 
@@ -66,10 +73,17 @@
 
         <button
           *ngIf="!currentEditTask || currentEditTask.id !== todo.id"
-          class="btn btn-sm retro-delete-btn"
+          class="btn btn-sm retro-edit-btn m-2"
           (click)="editTodo(todo)"
         >
-          -
+            <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  style="width: 1rem; height: 1rem;"
+                >
+                  <path d="M21.731 2.269a2.684 2.684 0 00-3.754 0l-1.464 1.465a.75.75 0 00.53 1.28H19a1.5 1.5 0 011.5 1.5V18.5a1.5 1.5 0 01-1.5 1.5H5.5a1.5 1.5 0 01-1.5-1.5v-2.189a.75.75 0 00-1.28-.53l-1.465 1.464a2.684 2.684 0 000 3.754l.02.02c.877.886 2.378.886 3.255 0L6.47 21.03a.75.75 0 001.06 0l2.25-2.25a.75.75 0 000-1.06L5.3 16.51c-.886-.877-.886-2.378 0-3.255L14.71 4.542a.75.75 0 000-1.06l-.02-.02zM19 1.5a2.5 2.5 0 013.5 3.5L16.5 10.5l-5-5L19 1.5z" />
+                </svg>
         </button>
 
         <!-- Save Button Logic -->

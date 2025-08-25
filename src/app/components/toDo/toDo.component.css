@@ -117,15 +117,23 @@
 }
 
 .retro-delete-btn {
-  background-color: #90a9fd;
+  background-color: #622cf7;
   color: #fff;
-  border: 2px solid #1f7923;
+  border: 2px solid #050505af;
   border-radius: 5px;
   font-size: 1rem;
   padding: 5px 10px;
   line-height: 1;
 }
-
+.retro-edit-btn{
+    background-color: #0ac496;
+  color: #fff;
+  border: 2px solid #070607;
+  border-radius: 5px;
+  font-size: rem;
+  padding: 5px 10px;
+  line-height: 1;
+}
 /* Empty message styling */
 .retro-empty-message {
   font-family: 'Press Start 2P', cursive;
