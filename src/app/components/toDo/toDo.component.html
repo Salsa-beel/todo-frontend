@@ -27,7 +27,7 @@
               <div class="input-group">
                 <input
                   type="text"
-                  class="form-control retro-input"
+                  class="form-control retro-input p-4"
                   placeholder="Add a new task..."
                   [(ngModel)]="newTask"
                   name="newTask"
@@ -43,16 +43,55 @@
                 *ngFor="let todo of allTasks"
                 [class.completed]="todo.completed"
               >
-                <span class="retro-text" [class.completed-text]="todo.completed">
-                  <span *ngIf="todo.completed" class="retro-icon">✔</span>
-                  {{ todo.task }}
-                </span>
-                <button
-                  class="btn btn-sm retro-delete-btn"
-                  (click)="deleteTodo(todo.id)"
-                >
-                  ✖
-                </button>
+               <!-- Conditional Display: Show text or input field -->
+      <span *ngIf="!currentEditTask || currentEditTask.id !== todo.id" class="retro-text" [class.completed-text]="todo.completed">
+        <span *ngIf="todo.completed" class="retro-icon">✔</span>
+        {{ todo.task }}
+      </span>
+
+           <textarea
+        *ngIf="currentEditTask && currentEditTask.id === todo.id"
+        [(ngModel)]="currentEditTask.task"
+        class="form-control retro-input"
+        rows="1"
+        style="overflow-y: hidden; resize: none;"
+      ></textarea>
+
+
+           <div class="d-flex align-items-center">
+        <!-- Edit Button Logic -->
+
+
+
+
+        <button
+          *ngIf="!currentEditTask || currentEditTask.id !== todo.id"
+          class="btn btn-sm retro-delete-btn"
+          (click)="editTodo(todo)"
+        >
+          -
+        </button>
+
+        <!-- Save Button Logic -->
+        <button
+          *ngIf="currentEditTask && currentEditTask.id === todo.id"
+          class="btn btn-sm retro-delete-btn"
+          (click)="saveEdit()"
+        >
+          Save
+        </button>
+
+        <!-- Delete Button Logic -->
+        <button
+          class="btn btn-sm m-1 retro-delete-btn"
+          (click)="deleteTodo(todo.id)"
+        >
+          ✖
+        </button>
+          <span class="score fs-5  text-end">
+        <span class="p-2 border-0 rounded-3" style="  background-color: rgba(234, 155, 253, 0.747);"> <span *ngIf="!todo.completed" class="countdown-text">{{ getRemainingTime(todo.createdAt) }}</span></span>
+      </span>
+      </div>
               </li>
             </ul>
 

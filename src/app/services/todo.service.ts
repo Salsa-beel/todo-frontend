@@ -19,9 +19,13 @@ addTodo(task:string){
   return this.http.post<any>(this.apiUrl, {task})
 }
 
-updateTodo(id:string , completed:boolean ){
+updateTodo(id:string , task:boolean ){
 
-  return this.http.put<any>(`${this.apiUrl}/${id}`, {completed})
+  return this.http.put<any>(`${this.apiUrl}/${id}`, {task})
+}
+completeTodo(id:string ){
+
+  return this.http.put<any>(`${this.apiUrl}/${id}`, {id})
 }
 
 deleteTodo(id:string){
