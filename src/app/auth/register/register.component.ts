@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
       response => {
           console.log('Login successful!', response);
           // On successful login, navigate to the to-do list
-          this.router.navigate(['/todos']);
+          this.router.navigate(['/login']);
         },
          error => {
           console.error('Login failed:', error);

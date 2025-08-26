@@ -3,12 +3,12 @@
   <h5 class="text-center retro-dashboard-title">My Stats</h5>
   <div class="d-flex flex-column gap-2">
     <div class="retro-stat-box">
-      <span class="retro-stat-label">Level:</span>
-      <span class="retro-stat-value">1</span>
+      <span class="retro-stat-label">Level: </span>
+      <span class="retro-stat-value">{{userScore?.level}}</span>
     </div>
     <div class="retro-stat-box">
       <span class="retro-stat-label">XP:</span>
-      <span class="retro-stat-value">0 / 100</span>
+      <span class="retro-stat-value">{{userScore?.points}} / 100</span>
     </div>
   </div>
   <hr class="retro-divider"/>

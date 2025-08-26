@@ -7,20 +7,20 @@ import { TodoService } from '../../services/todo.service';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-  allTasks:any
+  userScore:any
   constructor( private todoService:TodoService) { }
 
   ngOnInit() {
-    this.getAllTodos();
+    this.getUserScore();
   }
 
 
-    getAllTodos(){
+    getUserScore(){
 
-    this.todoService.getUser().subscribe((res)=>{
+    this.todoService.getUserScore().subscribe((res)=>{
 
-      this.allTasks = res;
-      console.log(this.allTasks)
+      this.userScore = res;
+      console.log(this.userScore)
 
     })
   }

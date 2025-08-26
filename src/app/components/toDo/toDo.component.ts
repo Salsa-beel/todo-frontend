@@ -25,7 +25,7 @@ export class ToDoComponent implements OnInit {
 
   getAllTodos(){
 
-    this.todoService.getAllTodo().subscribe((res)=>{
+    this.todoService.getallTasks().subscribe((res)=>{
 
       this.allTasks = res;
       console.log(this.allTasks)

@@ -102,8 +102,8 @@
         >
           ✖
         </button>
-          <span class="score fs-5  text-end">
-        <span class="p-2 border-0 rounded-3" style="  background-color: rgba(234, 155, 253, 0.747);"> <span *ngIf="!todo.completed" class="countdown-text">{{ getRemainingTime(todo.createdAt) }}</span></span>
+          <span class="score fs-5  text-end" *ngIf="!todo.completed">
+        <span class="p-2 border-0 rounded-3" style="  background-color: rgba(234, 155, 253, 0.747);"> <span  class="countdown-text">{{ getRemainingTime(todo.createdAt) }}</span></span>
       </span>
       </div>
               </li>

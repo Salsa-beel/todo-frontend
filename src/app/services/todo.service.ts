@@ -9,31 +9,31 @@ export class TodoService {
   private apiUrl = '/api';
 constructor( private http:HttpClient) { }
 
-getAllTodo(): Observable<any[]>{
+getallTasks(): Observable<any[]>{
 
- return this.http.get<any[]>(`${this.apiUrl}/todos`)
+ return this.http.get<any[]>(`${this.apiUrl}/allTasks`)
 }
-getUser(): Observable<any[]>{
+getUserScore(): Observable<any[]>{
 
- return this.http.get<any[]>(`${this.apiUrl}/user`)
+ return this.http.get<any[]>(`${this.apiUrl}/userScore`)
 }
 
 addTodo(task:string){
 
-  return this.http.post<any>(`${this.apiUrl}/todos`, {task})
+  return this.http.post<any>(`${this.apiUrl}/createTask`, {task})
 }
 
 updateTodo(id:string , task:boolean ){
 
-  return this.http.put<any>(`${this.apiUrl}/todos/${id}`, {task})
+  return this.http.put<any>(`${this.apiUrl}/taskById/${id}`, {task})
 }
 completeTodo(id:string ){
 
-  return this.http.put<any>(`${this.apiUrl}/todos/${id}/complete`, {id})
+  return this.http.put<any>(`${this.apiUrl}/taskById/${id}/complete`, {id})
 }
 
 deleteTodo(id:string){
 
-  return this.http.delete<any>(`${this.apiUrl}/todos/${id}`);
+  return this.http.delete<any>(`${this.apiUrl}/deleteById/${id}`);
 }
 }
