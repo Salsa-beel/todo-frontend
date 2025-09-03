@@ -11,13 +11,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AuthInterceptor } from './auth/services/Auth-Interceptor';
 import { AuthModule } from './auth/auth.module';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
       ToDoComponent,
       NavbarComponent,
-      SidebarComponent
+      SidebarComponent,
+      ProfileComponent
    ],
   imports: [
     BrowserModule,

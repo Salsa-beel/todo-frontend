@@ -1,0 +1,114 @@
+:root {
+            --bg-dark: #22252a;
+            --bg-medium: #33363b;
+            --bg-light: #44484d;
+            --border-color: #555c61;
+            --text-color: #f0f0f0;
+            --accent-color: #00ff00; /* Neon green */
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-color);
+            font-family: 'VT323', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: var(--bg-medium);
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: var(--bg-light);
+            padding: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .title-bar {
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            padding: 5px;
+            text-align: center;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .title {
+            font-size: 2rem;
+            text-shadow: 2px 2px var(--accent-color);
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        .profile-section {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .username-display {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .profile-label {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 5px;
+        }
+
+        .id-container {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 8px 12px;
+            margin-top: 10px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .user-id-text {
+            color: var(--accent-color);
+            font-size: 1rem;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .copy-button {
+            margin-left: 10px;
+            padding: 4px 10px;
+            background-color: var(--accent-color);
+            color: var(--bg-dark);
+            border: 1px solid var(--text-color);
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 2px 2px #00a000;
+            transition: all 0.2s;
+        }
+
+        .copy-button:hover {
+            box-shadow: 4px 4px #00a000;
+            transform: translate(-2px, -2px);
+        }
+
+        .copy-button:active {
+            box-shadow: 0 0 #00a000;
+            transform: translate(0, 0);
+        }

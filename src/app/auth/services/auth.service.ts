@@ -24,6 +24,7 @@ login(username:string, password:string):Observable<any>{
     tap((res:any)=>{
          if (res && res.token) {
           localStorage.setItem('authToken', res.token);
+          localStorage.setItem('userID', res.userId);
         }
     })
    )
@@ -62,5 +63,8 @@ login(username:string, password:string):Observable<any>{
 
    getToken(): string | null {
     return localStorage.getItem('authToken');
+  }
+  getUserId(): string | null {
+    return localStorage.getItem('userID');
   }
 }
