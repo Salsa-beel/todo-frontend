@@ -1,19 +1,19 @@
 /* src/app/top-navbar/top-navbar.component.css */
 
 .retro-navbar {
-  background-color: #552583; /* A dark, deep purple from your header */
-  border-bottom: 5px solid #000;
+  background-color: #FFFEEE; /* A dark, deep purple from your header */
+  /* border-bottom: 5px solid #CAC426; */
 
-  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 0px #FFFEEE;
   margin-bottom: 20px;
+
 }
 
 .retro-brand {
-  font-family: "Luckiest Guy", cursive;
-  font-size: 2rem;
-  color: #131213; /* A vibrant pink from your body background */
-  -webkit-text-stroke: 1px #fff;
-  text-shadow: 2px 2px 0px #e06805;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #080520; /* A vibrant pink from your body background */
 }
 
 .retro-toggler {
@@ -28,7 +28,7 @@
 .retro-nav-link {
   font-family: "Press Start 2P", cursive;
   font-size: 0.8rem;
-  color: #fff !important;
+  color: #080000 !important;
   text-transform: uppercase;
   transition: all 0.2s;
 }
@@ -39,5 +39,5 @@
 }
 
 .retro-nav-link.active {
-  color: #f875aa !important;
+  color: #BCB4FF !important;
 }

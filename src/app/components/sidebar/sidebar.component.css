@@ -2,28 +2,31 @@
 
 .retro-dashboard-card {
   border: 3px solid #000;
-  border-radius: 8px;
-  background-color: #fce4ec; /* A lighter pink for contrast */
+  border-radius: 18px;
+  background-color: #222223; /* A lighter pink for contrast */
   box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
   padding: 15px;
 }
 
 .retro-dashboard-title {
   font-family: 'Luckiest Guy', cursive;
-  color: #552583;
-  -webkit-text-stroke: 1px #fff;
-  text-shadow: 2px 2px 0px #F5A623;
+  color: #FFFEEE;
+  -webkit-text-stroke: 1px #0a090a;
+
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+
 }
 
 .retro-dashboard-subtitle {
   font-family: 'Luckiest Guy', cursive;
-  color: #F875AA;
+  color: #d39dff;
 }
 
 .retro-stat-box {
   background-color: #fff;
-  border: 2px solid #000;
-  border-radius: 5px;
+  border: 2px solid #d39dff;
+  border-radius: 15px;
   padding: 8px;
   display: flex;
   justify-content: space-between;
@@ -35,11 +38,12 @@
 }
 
 .retro-divider {
-  border-top: 2px dashed #000;
+  border-top: 2px dashed #ec9eff;
   margin: 15px 0;
 }
 
 .retro-icon-small {
   font-size: 1rem;
   margin-right: 5px;
+  color: #d39dffa8;
 }

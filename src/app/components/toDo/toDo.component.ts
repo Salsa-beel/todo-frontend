@@ -83,7 +83,7 @@ saveEdit() {
   }
 
     // NEW: Method to calculate and format the remaining time
-  getRemainingTime(createdAt: string | Date): string {
+  getRemainingTime(createdAt: string | Date): { hours: number, minutes: number, seconds: number, points: number, timeString: string } {
     const totalTimeHours = 8;
     const initialPoints = 3;
     const decayRateHours = 3; // Points decay every 3 hours
@@ -95,9 +95,15 @@ saveEdit() {
     const totalDurationMilliseconds = totalTimeHours * 60 * 60 * 1000;
     const remainingMilliseconds = totalDurationMilliseconds - elapsedTimeMilliseconds;
 
-    if (remainingMilliseconds <= 0) {
-      return `0h 0m 0s (0 pts)`;
-    }
+   if (remainingMilliseconds <= 0) {
+    return {
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+      points: 0,
+      timeString: `0h 0m 0s (0 pts)`
+    };
+  }
 
     const hours = Math.floor(remainingMilliseconds / (1000 * 60 * 60));
     const minutes = Math.floor((remainingMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
@@ -106,6 +112,12 @@ saveEdit() {
     const pointsToSubtract = Math.floor(elapsedTimeMilliseconds / (decayRateHours * 60 * 60 * 1000));
     const currentPoints = Math.max(0, initialPoints - pointsToSubtract);
 
-    return `${hours}h ${minutes}m ${seconds}s (${currentPoints} pts)`;
+  return {
+    hours: hours,
+    minutes: minutes,
+    seconds: seconds,
+    points: currentPoints,
+    timeString: `${hours}h ${minutes}m ${seconds}s`
+  };
   }
 }

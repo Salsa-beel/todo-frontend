@@ -1,24 +1,19 @@
 
 <div class="container-fluid retro-container p-4">
-  <div class="card retro-card">
-    <div class="card-body retro-body p-4">
+  <div class="">
+    <div class=" p-4">
 
-      <!-- TOP BAR / WINDOW TITLE -->
-      <div class="row mb-4">
-        <div class="col-12 text-center">
-          <h1 class="card-title retro-header">My To-Do List</h1>
-        </div>
-      </div>
+
 
       <div class="row">
 
         <!-- LEFT PANEL: USER DASHBOARD / GAMIFICATION -->
         <div class="col-lg-3 mb-4 mb-lg-0">
-        <app-profile></app-profile>
+        <app-sidebar></app-sidebar>
         </div>
 
         <!-- RIGHT PANEL: TO-DO LIST & FORM -->
-        <div class="col-lg-8">
+        <div class="col-lg-5">
           <div class="card p-3 retro-list-card">
 
             <!-- Form for adding new tasks -->
@@ -44,7 +39,9 @@
               >
                <!-- Conditional Display: Show text or input field -->
       <span *ngIf="!currentEditTask || currentEditTask.id !== todo.id" class="retro-text" [class.completed-text]="todo.completed">
-        <span *ngIf="todo.completed" class="retro-icon">✔</span>
+      <span class="material-symbols-outlined" *ngIf="todo.completed">
+select_check_box
+</span>
         {{ todo.task }}
       </span>
 
@@ -63,8 +60,12 @@
                 (click)="completeTodo(todo.id)"
                 *ngIf="!todo.completed"
               >
-                ✔
+               <span class="material-symbols-outlined">
+done_outline
+</span>
               </button>
+
+
         <!-- Edit Button Logic -->
 
 
@@ -75,23 +76,20 @@
           class="btn btn-sm retro-edit-btn m-2"
           (click)="editTodo(todo)"
         >
-            <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  style="width: 1rem; height: 1rem;"
-                >
-                  <path d="M21.731 2.269a2.684 2.684 0 00-3.754 0l-1.464 1.465a.75.75 0 00.53 1.28H19a1.5 1.5 0 011.5 1.5V18.5a1.5 1.5 0 01-1.5 1.5H5.5a1.5 1.5 0 01-1.5-1.5v-2.189a.75.75 0 00-1.28-.53l-1.465 1.464a2.684 2.684 0 000 3.754l.02.02c.877.886 2.378.886 3.255 0L6.47 21.03a.75.75 0 001.06 0l2.25-2.25a.75.75 0 000-1.06L5.3 16.51c-.886-.877-.886-2.378 0-3.255L14.71 4.542a.75.75 0 000-1.06l-.02-.02zM19 1.5a2.5 2.5 0 013.5 3.5L16.5 10.5l-5-5L19 1.5z" />
-                </svg>
+        <span class="material-symbols-outlined">
+edit
+</span>
         </button>
 
         <!-- Save Button Logic -->
         <button
           *ngIf="currentEditTask && currentEditTask.id === todo.id"
-          class="btn btn-sm retro-delete-btn"
+          class="btn btn-sm retro-save-btn"
           (click)="saveEdit()"
         >
-          Save
+          <span class="material-symbols-outlined">
+check_circle
+</span>
         </button>
 
         <!-- Delete Button Logic -->
@@ -99,10 +97,13 @@
           class="btn btn-sm m-1 retro-delete-btn"
           (click)="deleteTodo(todo.id)"
         >
-          ✖
+         <span class="material-symbols-outlined">
+delete
+</span>
         </button>
           <span class="score fs-5  text-end" *ngIf="!todo.completed">
-        <span class="p-2 border-0 rounded-3" style="  background-color: rgba(234, 155, 253, 0.747);"> <span  class="countdown-text">{{ getRemainingTime(todo.createdAt) }}</span></span>
+        <span class="p-2 border-0 rounded-3"> <span  class="countdown-text">{{ getRemainingTime(todo.createdAt).timeString }}</span> |</span>
+      <span class="countdown-text">Points: {{ getRemainingTime(todo.createdAt).points }}</span>
       </span>
       </div>
               </li>
