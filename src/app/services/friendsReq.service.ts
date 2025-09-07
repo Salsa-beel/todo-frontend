@@ -24,8 +24,8 @@ sendReq(friendUsername:string){
   return this.http.post<any>(`${this.apiUrl}/sendReq`, {friendUsername})
 }
 
-respondToReq(reqId:string, action:string){
-  return this.http.put<any>(`${this.apiUrl}/respondToReq`, {reqId,action})
+respondToReq(friendReqId:string, action:string){
+  return this.http.put<any>(`${this.apiUrl}/respondReq`, {friendReqId,action})
 
 }
 }

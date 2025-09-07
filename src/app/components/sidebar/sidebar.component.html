@@ -13,9 +13,26 @@
   </div>
   <hr class="retro-divider"/>
   <div class="retro-achievements">
-    <h6 class="retro-dashboard-subtitle">Achievements:</h6>
-    <ul class="list-unstyled">
-      <li class="text-light"><span >⭐</span> First Task Completed</li>
-    </ul>
+    <h5 class="text-center retro-dashboard-title">My Friends</h5>
+  <div class="d-flex flex-column gap-2 mt-3" *ngFor="let item of myFriends">
+    <div class="retro-stat-box d-flex flex-row">
+    <div class="  border-2 border-light rounded-4 d-flex align-items-center justify-content-center" style="width: 110px; height: 40px; background-color: #fcfcfc;">
+      <span class="retro-stat-label text-dark">{{item.username}} </span>
+
+    </div>
+    <div class="retro-stat-box ms-auto mx-1  ">
+      <span class="retro-stat-label">Level:</span>
+      <span class="retro-stat-value ">{{item?.level}}</span>
+</div>
+ <div class="retro-stat-box">
+      <span class="retro-stat-label">XP:</span>
+      <span class="retro-stat-value">{{item ?.points}} / 100</span>
+    </div>
+    </div>
+
+  </div>
   </div>
 </div>
+
+
+

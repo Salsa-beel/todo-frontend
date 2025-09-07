@@ -138,9 +138,9 @@
 /* Empty message styling */
 .retro-empty-message {
   font-family: 'Press Start 2P', cursive;
-  color: #555;
-  font-size: 0.8rem;
-  text-shadow: 1px 1px 0px #fff;
+  color: #ffffff;
+  font-size: 0.9rem;
+
 }
 .retro-list-card{
   background-color: #232322;

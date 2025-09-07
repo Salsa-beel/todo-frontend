@@ -28,8 +28,7 @@
   border: 2px solid #d39dff;
   border-radius: 15px;
   padding: 8px;
-  display: flex;
-  justify-content: space-between;
+
 }
 
 .retro-stat-label, .retro-stat-value {

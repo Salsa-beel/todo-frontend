@@ -12,6 +12,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AuthInterceptor } from './auth/services/Auth-Interceptor';
 import { AuthModule } from './auth/auth.module';
 import { ProfileComponent } from './components/profile/profile.component';
+import { FriendRequestsComponent } from './components/friend-requests/friend-requests.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProfileComponent } from './components/profile/profile.component';
       ToDoComponent,
       NavbarComponent,
       SidebarComponent,
-      ProfileComponent
+      ProfileComponent,
+      FriendRequestsComponent
    ],
   imports: [
     BrowserModule,
