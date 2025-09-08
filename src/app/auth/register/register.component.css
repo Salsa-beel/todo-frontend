@@ -1,0 +1,22 @@
+.pixel-container {
+  border: 4px solid #fff;
+  border-radius: 25px;
+  background-color: #111111;
+  box-shadow: 8px 8px 0px #a7e071;
+  color: #fff;
+  padding: 2.5rem;
+}
+
+.btn-green {
+  background-color: #a7e071 !important;
+  border-color: #ffffff !important;
+  border-radius: 20px;
+
+}
+
+h2{
+
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+
+}

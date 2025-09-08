@@ -1,49 +1,72 @@
-<div class="d-flex justify-content-center align-items-center vh-100">
+
+<div class="container-fluid ">
+<div class="row justify-content-center  align-items-center" style="height: 100vh;">
+
+
+  <div class="col-lg-3">
+
     <div class="pixel-container p-5 w-100" style="max-width: 450px;">
-        <h2 class="text-center mb-4 text-pixel-green">Welcome <br> TO-DO LOGIN</h2>
-        <form (ngSubmit)="onRegister()">
-            <div class="mb-3">
+        <h2 class="text-center mb-2 ">Welcome Frog</h2>
+     <span class="d-flex justify-content-center">  <img src="/assets/frog-logo.jpg" class="border-0 rounded-circle " style="width: 90px; height: 90px;  " alt=""></span>
+            <p class="text-center mb-4 text-light ">Already have an account? <a class="text-light " routerLink="/auth/login">Login</a></p>
+
+       <form (ngSubmit)="onRegister()">
+             <div class="mb-3 d-flex align-items-center position-relative gap-3">
+                 <span class="material-symbols-outlined ">
+                alternate_email
+              </span>
                 <input
                     type="text"
                     class="form-control"
-                    placeholder="USERNAME"
+                    placeholder=" Username"
                     [(ngModel)]="username"
+
                     name="username"
                     required>
+
             </div>
-            <div class="mb-3">
+
+                      <div class="mb-3 d-flex align-items-center position-relative gap-3">
+              <span class="material-symbols-outlined">
+mail
+</span>
                 <input
                     type="text"
                     class="form-control"
-                    placeholder="EMAIL"
+                    placeholder="Email"
                     [(ngModel)]="email"
                     name="email"
                     required>
             </div>
-            <div class="my-1 ">
+                       <div class="mb-3 d-flex align-items-center position-relative gap-3">
+                    <span class="material-symbols-outlined">
+lock
+</span>
                 <input
                     type="password"
                     class="form-control"
-                    placeholder="PASSWORD"
+                    placeholder="Password"
                     [(ngModel)]="password"
                     name="password"
                     required>
 
             </div>
-                       <div class="my-3">
-                     <a  routerLink="/login">
-                       <span class="text-white fs-6 mt-5">Already have an account?</span>
-                     </a>
-                       </div>
 
-            <div class="d-grid gap-2 mt-2">
+
+            <div class=" mt-2">
+                 <div class=" gap-2  d-flex justify-content-center">
                 <button
                     type="submit"
-                    class="btn btn-primary btn-pixel"
+                    class="btn btn-green mt-2 w-50"
                     [disabled]="!username || !password">
-                    LOGIN
+                    Register
                 </button>
+            </div>
             </div>
         </form>
     </div>
+
+      </div>
 </div>
+</div>
+

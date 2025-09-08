@@ -1,33 +1,58 @@
-<div class="d-flex justify-content-center align-items-center vh-100">
+
+
+<div class="container-fluid ">
+<div class="row justify-content-center  align-items-center" style="height: 100vh;">
+
+
+  <div class="col-lg-3">
+
     <div class="pixel-container p-5 w-100" style="max-width: 450px;">
-        <h2 class="text-center mb-4 ">Welcome <br> TO-DO LOGIN</h2>
+        <h2 class="text-center mb-2 ">Welcome Back</h2>
+     <span class="d-flex justify-content-center">  <img src="/assets/frog-logo.jpg" class="border-0 rounded-circle " style="width: 90px; height: 90px;  " alt=""></span>
+        <p class="text-center mb-4 text-light ">Don't have an account yet? <a class="text-light " routerLink="/auth/register">Register</a></p>
         <form (ngSubmit)="onLogin()">
-            <div class="mb-3">
+            <div class="mb-3 d-flex align-items-center position-relative gap-3">
+                 <span class="material-symbols-outlined ">
+                alternate_email
+              </span>
                 <input
                     type="text"
                     class="form-control"
-                    placeholder="USERNAME"
+                    placeholder=" Username"
                     [(ngModel)]="username"
+
                     name="username"
                     required>
+
             </div>
-            <div class="mb-4">
+
+            <div class="mb-3 d-flex align-items-center position-relative gap-3">
+              <span class="material-symbols-outlined">
+lock
+</span>
                 <input
                     type="password"
                     class="form-control"
-                    placeholder="PASSWORD"
+                    placeholder="Password"
                     [(ngModel)]="password"
                     name="password"
                     required>
             </div>
-            <div class="d-grid gap-2">
+            <div class=" gap-2  d-flex justify-content-center">
                 <button
                     type="submit"
-                    class="btn btn-primary btn-pixel"
+                    class="btn btn-green mt-2 w-50"
                     [disabled]="!username || !password">
                     LOGIN
                 </button>
             </div>
+            <div>
+                <p class="text-center mt-3 text-light">Forgot your password? <a class="text-light" routerLink="/reset-password">Reset Password</a></p>
+            </div>
         </form>
     </div>
+
+      </div>
 </div>
+</div>
+
