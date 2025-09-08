@@ -60,13 +60,13 @@
 
 .retro-btn {
   font-family: 'Anton', cursive;
-  background-color: #CAC426;
+  background-color: #a7e071 ;
   color: #0e0101;
   font-size: 1.2rem;
 }
 
 .retro-btn:hover {
-  background-color: #c795ff;
+  background-color: #020202;
   color: #fff;
 }
 
@@ -82,7 +82,7 @@
   background-color: #fff;
   padding: 15px;
   margin-bottom: 10px;
-  box-shadow: 5px 5px 0px rgba(227, 168, 255, 0.5);
+  box-shadow: 5px 5px 0px a7e071 (227, 168, 255, 0.5);
   transition: transform 0.2s;
 
 }
@@ -103,11 +103,7 @@
   color: #888;
 }
 
-.retro-icon {
-  font-size: 1.2rem;
-  margin-right: 5px;
-  color: #50E3C2;
-}
+
 
 .retro-delete-btn {
   background-color: #ff7279;
@@ -145,14 +141,14 @@
 }
 .retro-list-card{
   background-color: #232322;
-  border: 5px solid #CAC426;
+  border: 5px solid #a7e071 ;
   border-radius: 25px;
 }
 /* Input field styling */
 .form-control {
-  background-color: #cfcfcf !important;
+  background-color: #d3d3d3  !important;
   border: 4px solid #fff !important;
-  color: #fff !important;
+  color: #080808 !important;
   font-family: 'Press Start 2P', cursive;
   box-shadow: inset 4px 4px 0px #000;
   font-size: 0.8rem;
@@ -165,6 +161,6 @@
 .form-control:focus {
   background-color: #FFFEEE !important;
   border-color: #222223 !important;
-  color: #fff !important;
+  color: #080808 !important;
   box-shadow: inset 4px 4px 0px #000, 0 0 0 0.25rem rgba(46, 204, 113, 0.25) !important;
 }
