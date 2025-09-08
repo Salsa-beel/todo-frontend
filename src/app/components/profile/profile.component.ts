@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FriendsReqService } from '../../services/friendsReq.service';
-import { AuthService } from '../../auth/services/auth.service';
+import { AuthService } from '../../auth/auth-services/auth.service';
 
 @Component({
   selector: 'app-profile',

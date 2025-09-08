@@ -3,11 +3,11 @@ import { TodoService } from '../../services/todo.service';
 import { FriendsReqService } from '../../services/friendsReq.service';
 
 @Component({
-  selector: 'app-sidebar',
-  templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  selector: 'app-my-stats',
+  templateUrl: './my-stats.component.html',
+  styleUrls: ['./my-stats.component.css']
 })
-export class SidebarComponent implements OnInit {
+export class MyStatsComponent implements OnInit {
   userScore:any
   myFriends:any[] = []
     private profileImages: string[] = [
