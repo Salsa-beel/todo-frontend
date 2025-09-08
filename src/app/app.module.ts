@@ -8,8 +8,8 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { AuthInterceptor } from './auth/services/Auth-Interceptor';
+import { MyStatsComponent } from './components/my-stats/my-stats.component';
+import { AuthInterceptor } from './auth/auth-services/Auth-Interceptor';
 import { AuthModule } from './auth/auth.module';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FriendRequestsComponent } from './components/friend-requests/friend-requests.component';
@@ -19,7 +19,7 @@ import { FriendRequestsComponent } from './components/friend-requests/friend-req
     AppComponent,
       ToDoComponent,
       NavbarComponent,
-      SidebarComponent,
+MyStatsComponent,
       ProfileComponent,
       FriendRequestsComponent
    ],

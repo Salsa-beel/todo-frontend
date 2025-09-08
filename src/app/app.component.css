@@ -16,7 +16,7 @@
 
 .background {
   /* Using a repeating linear gradient to create the pixel grid effect */
-  background-color: #FFFEEE;
+  background-color: #111110;
   /* background-image:
     linear-gradient(#2222231f 1px, transparent 1px),
     linear-gradient(90deg, #22222338 1px, transparent 1px); */
