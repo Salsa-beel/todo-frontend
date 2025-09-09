@@ -13,15 +13,19 @@ import { AuthInterceptor } from './auth/auth-services/Auth-Interceptor';
 import { AuthModule } from './auth/auth.module';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FriendRequestsComponent } from './components/friend-requests/friend-requests.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
       ToDoComponent,
       NavbarComponent,
-MyStatsComponent,
+      MyStatsComponent,
       ProfileComponent,
-      FriendRequestsComponent
+      FriendRequestsComponent,
+      LayoutComponent,
+      SidebarComponent
    ],
   imports: [
     BrowserModule,
