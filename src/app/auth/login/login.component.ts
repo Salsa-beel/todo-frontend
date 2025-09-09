@@ -25,7 +25,7 @@ export class LoginComponent {
         response => {
           console.log('Login successful!', response);
           // On successful login, navigate to the to-do list
-          this.router.navigate(['/todos']);
+          this.router.navigate(['/layout/todos']);
         },
         error => {
           console.error('Login failed:', error);

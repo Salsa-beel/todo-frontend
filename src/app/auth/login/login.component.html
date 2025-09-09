@@ -1,12 +1,17 @@
 
 
 <div class="container-fluid ">
-<div class="row justify-content-center  align-items-center" style="height: 100vh;">
+  <div class="row justify-content-center  align-items-center" style="height: 10vh;">
+    <div class="col-md-3">
+
+    </div>
+  </div>
+<div class="row justify-content-center " >
 
 
-  <div class="col-lg-3">
+  <div class="col-lg-3 col-md-6">
 
-    <div class="pixel-container p-5 w-100" style="max-width: 450px;">
+    <div class="pixel-container p-5 w-100"  >
         <h2 class="text-center mb-2 ">Welcome Back</h2>
      <span class="d-flex justify-content-center">  <img src="/assets/frog-logo.jpg" class="border-0 rounded-circle " style="width: 90px; height: 90px;  " alt=""></span>
         <p class="text-center mb-4 text-light ">Don't have an account yet? <a class="text-light " routerLink="/auth/register">Register</a></p>
@@ -20,7 +25,6 @@
                     class="form-control"
                     placeholder=" Username"
                     [(ngModel)]="username"
-
                     name="username"
                     required>
 
