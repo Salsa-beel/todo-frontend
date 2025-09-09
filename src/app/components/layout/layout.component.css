@@ -1,0 +1,37 @@
+
+    .retro-body {
+      border-radius: 22px;
+      border-top: 2px solid #00ec4f49;
+      border-left: 2px solid #00ec4f49;
+      background-color: #0c0c0c;
+      padding: 20px;
+    }
+
+    .background {
+      background-color: #111110;
+      min-height: 100vh;
+    }
+
+    .sidebar-container {
+      /* border-right: 2px solid #dbd2d2; */
+      background-color: #1a1a1a;
+      padding: 1rem;
+    }
+
+    /* Animation keyframes for the bounceIn effect */
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.1);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      80% {
+        transform: scale(0.95);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
